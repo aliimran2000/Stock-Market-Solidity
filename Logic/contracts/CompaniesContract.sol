@@ -17,7 +17,7 @@ contract CompaniesContract {
         bool isApproved;
     }
 
-    
+
 
     mapping(address => CompanyDetail) public CompaniesDetails;
 
@@ -81,7 +81,8 @@ contract CompaniesContract {
         CompanyNamesList.push(_Name);
         CompanyFounderList.push(_msgSender);
     }
-
+    
+        
     function _approveCompany(address _CpnyAddr) external {
         require(
             CompaniesDetails[_CpnyAddr].isRegistered == true,

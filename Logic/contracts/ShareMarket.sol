@@ -16,6 +16,7 @@ contract ShareMarket is Governable("Contract Deployer") {
 
     CompaniesContract private _Companies;
 
+    
     constructor() {
         _Companies = new CompaniesContract();
     }

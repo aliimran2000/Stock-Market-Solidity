@@ -51,6 +51,11 @@ contract Governable {
     {
         address Owner = msg.sender;
 
+        require(
+            Governers[_newGoverner].Governer_ID != 0,
+            "governer already added"
+        );
+
         Governers[_newGoverner] = Governer({
             Name: _Name,
             Governer_ID: Governer_ID_Seed
