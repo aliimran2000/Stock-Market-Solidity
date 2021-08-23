@@ -41,16 +41,16 @@ A company can be created by any user
 ### Share Market
 ![146e705d22e2e3a89fcd524e82e48e75.png](./_resources/995436c16296498db221984f2c59c76f.png)
 
-793a1a06  =>  getNewSaleID()
-07498ab5  =>  requestRegisterMyCompany(string,uint256,uint256)
-3cf079f0  =>  approveCompany(address)
-408bf4c3  =>  getAllCompanies()
-56ea04a3  =>  isCompanyRegistered(address)
-62f0dc3f  =>  isCompanyApproved(address)
-3d3325e0  =>  getStockPrice(address)
-97f24f9c  =>  buyStockFromCompany(address,uint256)
-5ca779e5  =>  postStocksforSale(address,uint256,uint256)
-a6dcd15b  =>  buyPostedStock(uint256)
+- 793a1a06  =>  getNewSaleID()
+- 07498ab5  =>  requestRegisterMyCompany(string,uint256,uint256)
+- 3cf079f0  =>  approveCompany(address)
+- 408bf4c3  =>  getAllCompanies()
+- 56ea04a3  =>  isCompanyRegistered(address)
+- 62f0dc3f  =>  isCompanyApproved(address)
+- 3d3325e0  =>  getStockPrice(address)
+- 97f24f9c  =>  buyStockFromCompany(address,uint256)
+- 5ca779e5  =>  postStocksforSale(address,uint256,uint256)
+- a6dcd15b  =>  buyPostedStock(uint256)
 
 ***
 ### Stock Token
@@ -61,22 +61,22 @@ a6dcd15b  =>  buyPostedStock(uint256)
 ***
 ### CompaniesContract
 ![b83efb02eca330fae096663702325871.png](./_resources/92d1cf35b9314a1fbc3b26d5ca6abd55.png)
-0558d3e9  =>  getCompanyDetails(address)
-408bf4c3  =>  getAllCompanies()
-673448dd  =>  isApproved(address)
-c3c5a547  =>  isRegistered(address)
-bf9c2a4c  =>  _requestRegisterMyCompany(address,string,uint256,uint256)
-a5bdfed9  =>  _approveCompany(address)
-3d3325e0  =>  getStockPrice(address)
-aff9afcb  =>  reduceStock(address,uint256)
+- 0558d3e9  =>  getCompanyDetails(address)
+- 408bf4c3  =>  getAllCompanies()
+- 673448dd  =>  isApproved(address)
+- c3c5a547  =>  isRegistered(address)
+- bf9c2a4c  =>  _requestRegisterMyCompany(address,string,uint256,uint256)
+- a5bdfed9  =>  _approveCompany(address)
+- 3d3325e0  =>  getStockPrice(address)
+- aff9afcb  =>  reduceStock(address,uint256)
 
 
 ***
 ### Governable
 ![4e36e33a8324459b15e4ce2e4e375c62.png](./_resources/91c19c4205b548888db13005008cb46d.png)
-3fbbc7e9  =>  getGoverners()
-a5068c98  =>  addGoverner(address,string)
-31ecd8ee  =>  isGoverner(address)
+- 3fbbc7e9  =>  getGoverners()
+- a5068c98  =>  addGoverner(address,string)
+- 31ecd8ee  =>  isGoverner(address)
 
 ***
 
