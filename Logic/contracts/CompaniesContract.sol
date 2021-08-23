@@ -12,12 +12,11 @@ contract CompaniesContract {
     struct CompanyDetail {
         string Name;
         uint256 totalStocks;
+        uint256 availableStocks;
         uint256 stockPrice;
         bool isRegistered;
         bool isApproved;
     }
-
-
 
     mapping(address => CompanyDetail) public CompaniesDetails;
 
@@ -72,6 +71,7 @@ contract CompaniesContract {
         CompaniesDetails[_msgSender] = CompanyDetail({
             Name: _Name,
             totalStocks: _totalStocks,
+            availableStocks: _totalStocks,
             stockPrice: _stockPrice,
             isRegistered: true,
             isApproved: false
@@ -81,8 +81,7 @@ contract CompaniesContract {
         CompanyNamesList.push(_Name);
         CompanyFounderList.push(_msgSender);
     }
-    
-        
+
     function _approveCompany(address _CpnyAddr) external {
         require(
             CompaniesDetails[_CpnyAddr].isRegistered == true,
@@ -93,6 +92,27 @@ contract CompaniesContract {
             "Company is already approved"
         );
         CompaniesDetails[_CpnyAddr].isApproved = true;
+    }
+
+    function getStockPrice(address _CpnyAddr) public view returns (uint256) {
+        require(
+            isApproved(_CpnyAddr) == true,
+            "Company is not approved or registered"
+        );
+        return CompaniesDetails[_CpnyAddr].stockPrice;
+    }
+
+    function reduceStock(address _CpnyAddr, uint256 numberofStocks)
+        public
+        payable
+    {
+        require(isApproved(_CpnyAddr) == true, "Company not approved");
+        require(
+            CompaniesDetails[_CpnyAddr].availableStocks >= numberofStocks,
+            "No more stocks"
+        );
+
+        CompaniesDetails[_CpnyAddr].availableStocks -= numberofStocks;
     }
 
     //approve company implmented in  share market
