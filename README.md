@@ -1,4 +1,4 @@
-Share-Market-Smart-Contract-Docs
+Feel Free to Add changes and Point Out Bugs :)
 
 # Share-Market-Smart-Contract
 Github: [aliimran2000](github.com/aliimran2000)
