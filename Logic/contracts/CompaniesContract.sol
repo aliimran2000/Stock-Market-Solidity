@@ -1,8 +1,8 @@
 pragma solidity 0.8.7;
 
-/// @title Governable Contract
+/// @title Companies Contract main purpose is to be used as an initiated contract to store and control company data and policies
 /// @author github.com/aliimran2000
-/// @notice gives any contract a list of governers
+/// @dev to be added ; Control Internal Company data and set Inital stock price here
 contract CompaniesContract {
     string[] CompanyNamesList;
     address[] CompanyFounderList;

@@ -5,8 +5,9 @@ import "./CompaniesContract.sol";
 import "./StockToken.sol";
 
 //words share and stock are used interchangebly across the project
-/// @title shareholder info
-/// @author aliimran2000
+/// @title Main ShareMArket Cotnract Storage of Shares for each user and main finctions are done here 
+/// @author github.com/aliimran2000
+/// @dev Add more functionaliities here to make share market better 
 contract ShareMarket is Governable("Contract Deployer"), StockToken(1000000) {
     event companyRegistrationRequested(address indexed Owner, string Name);
     event companyRegistrationApproved(

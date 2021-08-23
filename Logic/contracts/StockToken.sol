@@ -2,6 +2,10 @@ pragma solidity 0.8.7;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+/// @title ERC20 token for use in Share Market
+/// @author github.com/aliimran2000
+/// @notice use as currency for Share market
+/// @dev use as currency for share market
 contract StockToken is ERC20 {
     constructor(uint256 _initialsupply) ERC20("StockToken", "STT") {
         _mint(address(this), _initialsupply);
